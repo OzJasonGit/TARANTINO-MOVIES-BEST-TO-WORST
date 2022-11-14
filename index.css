@@ -84,3 +84,58 @@ body {
 #TITLE {
     grid-area: MAIN_TITLE;
 }
+
+
+#DESCRIPTION {
+    width: 100%;
+    height: auto;
+    display: grid;
+
+    grid-area: DESCRIPTION;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-template-areas: "TEXT GIF";
+}
+
+
+#GRID-CONTAINER {
+    width: 100%;
+    height: auto;
+    display: grid;
+
+    grid-area: REACT_ACCORDION;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-template-areas: ". ACCORDION ACCORDION";
+}
+
+
+
+#HOLDER {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+#TEXT {
+    grid-area: TEXT;
+    width: 100%;
+    height: auto;
+
+    
+}
+
+
+#GIF {
+    grid-area: GIF;
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+
+    
+}
+
+    
