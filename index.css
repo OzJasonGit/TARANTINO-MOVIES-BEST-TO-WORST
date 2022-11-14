@@ -43,12 +43,13 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
 
-    grid-column-gap: 40px;
+    grid-column-gap: 100px;
     grid-row-gap: 40px;
     grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: ". MAIN_TITLE ."
-                         ". APP_GRID .";
+                         ". DESCRIPTION ."
+                         ". REACT_ACCORDION .";
 }
 /*******************************************************************/
 
@@ -78,3 +79,8 @@ body {
 
 }
 /*****************************************************************/
+
+
+#TITLE {
+    grid-area: MAIN_TITLE;
+}
