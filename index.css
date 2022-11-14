@@ -1,0 +1,80 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************************************************************************************************/
+body {
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+/*******************************************************************/
+
+
+
+
+
+
+
+
+/*******************************************************************/
+#MAIN-CONTAINER {
+    width: 90vw;
+    height: 100%;
+    display: grid;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-areas: ". MAIN_TITLE ."
+                         ". APP_GRID .";
+}
+/*******************************************************************/
+
+
+
+
+/*******************************************************************/
+#APP_GRID {
+
+    width: 100%;
+    height: auto;
+    display: grid;
+
+    grid-area: APP_GRID;
+    grid-row-gap: 40px;
+    grid-column-gap: 40px;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: 60px auto auto auto auto auto auto auto 60px;
+    grid-template-areas: ". . ."
+        "TITLE TITLE TITLE"
+        "IR CANVAS CANVAS"
+        "MC CANVAS CANVAS"
+        "SP CANVAS CANVAS"
+        "NOY CANVAS CANVAS"
+        "INCTR CANVAS CANVAS"
+        "SUBMIT CANVAS CANVAS";
+
+}
+/*****************************************************************/
