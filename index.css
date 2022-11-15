@@ -64,7 +64,7 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
 
-    grid-column-gap: 60px;
+    grid-column-gap: 40px;
     grid-row-gap: 40px;
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -84,7 +84,7 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
 
-    grid-column-gap: 60px;
+    grid-column-gap: 40px;
     grid-row-gap: 40px;
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows:  auto auto;
@@ -103,7 +103,7 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
 
-    grid-column-gap: 60px;
+    grid-column-gap: 40px;
     grid-row-gap: 40px;
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: auto auto;
@@ -240,10 +240,11 @@ body {
     grid-row-gap: 40px;
     grid-column-gap: 40px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas: ". TITLE TITLE"
+                         "ACCORDION ACCORDION ACCORDION"
                          "ACCORDION ACCORDION ACCORDION";
-    background-color:aquamarine;
+    
 }
 
     
@@ -253,9 +254,19 @@ body {
     grid-area: TITLE;
     width: 100%;
     height: auto;
+    font-family: sofia-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 5rem;
+    text-align: right;
 }
 
-
+#REACT {
+    grid-area: ACCORDION;
+    width: 100%;
+    height: auto;
+    background-color: hotpink;
+}
 
 
 
@@ -269,6 +280,7 @@ h1 {
     font-style: normal;
     font-size: 5rem;   
 }
+
 
 h2 {
     font-family: sofia-pro, sans-serif;
