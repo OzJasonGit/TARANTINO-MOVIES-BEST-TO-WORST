@@ -43,7 +43,7 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
 
-    grid-column-gap: 100px;
+    grid-column-gap: 60px;
     grid-row-gap: 40px;
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -117,25 +117,66 @@ body {
 }
 
 
+#GIPHY{
+    grid-area: IMAGE;
+    opacity: 0.85;
+    -moz-opacity: 0.45;
+    filter: alpha(opacity=45);
+    background-image: url(../assets/BAD-MUTHAFUCKER.gif);
+    background-repeat: repeat;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
 
 
 
 #TEXT {
     grid-area: TEXT;
     width: 100%;
-    height: auto;
-
-    
+    height: auto;   
 }
 
 
 #GIF {
+    justify-: right;
     grid-area: GIF;
     width: 100%;
-    height: 100%;
-    background-color: blue;
-
+    height: auto;
+    display: grid;    
+    position: relative;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    grid-template-areas: ". IMAGE IMAGE"
+                         ". IMAGE IMAGE";
+    
     
 }
 
+
+#ACCORDION-HOLDER {
+    grid-area: ACCORDION;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-row-gap: 40px;
+    grid-column-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: ". TITLE TITLE"
+                         "ACCORDION ACCORDION ACCORDION";
+    background-color:aquamarine;
+}
+
     
+
+
+#THE-LIST {
+    grid-area: TITLE;
+    width: 100%;
+    height: auto;
+}
