@@ -168,9 +168,9 @@ body {
     display: grid;
 
     grid-area: DESCRIPTION;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-column-gap: 40px;
-    grid-template-areas: "TEXT GIF";
+    grid-template-areas: "TEXT TEXT GIF GIF GIF";
 }
 
 
@@ -193,18 +193,45 @@ body {
 }
 
 
+
+
+
+#GIF {
+    justify-: right;
+    grid-area: GIF;
+    width: 100%;
+    height: auto;
+    display: grid;
+    position: relative;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    grid-template-areas: "IMAGE IMAGE IMAGE"
+        ". . .";
+}
+
+
+
+
+
 #GIPHY{
     grid-area: IMAGE;
     opacity: 0.85;
     -moz-opacity: 0.45;
     filter: alpha(opacity=45);
     background-image: url(../assets/BAD-MUTHAFUCKER.gif);
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: absolute;
     height: 100%;
     width: 100%;
     z-index: 10;
 }
+
+
+
+
 
 
 
@@ -216,22 +243,7 @@ body {
 }
 
 
-#GIF {
-    justify-: right;
-    grid-area: GIF;
-    width: 100%;
-    height: auto;
-    display: grid;    
-    position: relative;
-    grid-column-gap: 40px;
-    grid-row-gap: 40px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 3fr 1fr;
-    grid-template-areas: ". IMAGE IMAGE"
-                         ". IMAGE IMAGE";
-    
-    
-}
+
 
 
 #ACCORDION-HOLDER {
