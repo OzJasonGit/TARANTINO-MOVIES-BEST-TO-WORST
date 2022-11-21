@@ -74,6 +74,13 @@ body {
     grid-row-gap: 0px;
     justify-content: center;
     grid-template-rows: auto auto auto;
+    -webkit-box-align: start;
+        -webkit-align-items: start;
+        -ms-flex-align: start;
+        align-items: start;
+        -webkit-align-content: start;
+        -ms-flex-line-pack: start;
+        align-content: start;
     grid-template-columns: 1fr;
     grid-template-areas: "HEADER"
                          "MAIN"
@@ -102,7 +109,7 @@ body {
     grid-column-gap: 40px;
     grid-row-gap: 100px;
     grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: 100px 1fr 1fr 1fr 1fr 100px;
+    grid-template-rows: 40px 1fr 1fr 1fr 1fr 40px;
     grid-template-areas: ". . ."
                          ". ICON ."
                          ". MAIN_TITLE ."
@@ -133,7 +140,7 @@ body {
 
 #HEADER {
     width: 90vw;
-    height: 300px;
+    height: auto;
     display: grid;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -141,13 +148,13 @@ body {
     justify-content: center;
 
     grid-column-gap: 40px;
-    grid-row-gap: 40px;
+    grid-row-gap: 60px;
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows:  auto auto auto;
     background-color: #2e2e2e;
     grid-template-areas: ". . ."
                          ". CLOCK ."
-                         ". . ."        
+                         ". . .";        
 }
 
 
@@ -161,12 +168,25 @@ body {
 #ICON-HOLDER {
     grid-area: ICON;
     display: grid;
-    height: 300px
+    height: 100%;
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
-    
+        grid-template-areas: ". IMAGE IMAGE";            
     justify-content: center;
 }
+
+
+#ICON {   
+    grid-area: IMAGE;
+    display: flex;
+    height: 300px;
+    width: 300px;
+    justify-content: right;
+}
+
+
+
+
 
 #FOOTER {
     width: 90vw;
