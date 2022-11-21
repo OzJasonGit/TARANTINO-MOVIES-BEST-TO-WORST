@@ -14,10 +14,6 @@
 
 
 
-
-
-
-
 $(function() {
 	var Accordion = function(el, multiple) {
 		this.el = el || {};
@@ -44,3 +40,8 @@ $(function() {
 
 	var accordion = new Accordion($('#accordion'), false);
 });
+
+
+
+
+
