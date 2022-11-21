@@ -148,8 +148,8 @@ body {
     grid-column-gap: 40px;
     grid-row-gap: 80px;
     grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: 20px 1fr 1fr 1fr 20px;
-    grid-template-areas: ". . ."
+    grid-template-rows:  1fr 1fr 1fr 20px;
+    grid-template-areas: 
                          ". MAIN_TITLE ."
                          ". DESCRIPTION ."
                          ". REACT_ACCORDION ."
@@ -213,7 +213,7 @@ body {
 
 #FOOTER {
     width: 90vw;
-    height: 300px;
+    height: auto;
     display: grid;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -223,15 +223,24 @@ body {
     grid-column-gap: 40px;
     grid-row-gap: 40px;
     grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto auto;
         background-color: #2e2e2e;
         grid-template-areas: ". . ."
                              ". TEXT ."
-                             ". . ."
+                             ". IMAGE ."
+                            
 }
 
 #FOOTER-TEXT {
     grid-area: TEXT;
+}
+
+
+#FOOTER-IMAGE{
+    display: flex;
+    grid-area: IMAGE;
+    justify-content: right;
+
 
 }
 /*******************************************************************/
@@ -308,7 +317,7 @@ body {
     grid-area: REACT_ACCORDION;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 40px;
-    grid-template-areas: ". ACCORDION ACCORDION";
+    grid-template-areas: "KILL-BILL ACCORDION ACCORDION";
 }
 
 
@@ -316,6 +325,23 @@ body {
 #HOLDER {
     width: 100%;
     height: 100%;
+}
+
+
+
+#KILL-BILL {
+    grid-area: KILL-BILL;
+    width: 100%;
+    height: 60%;
+    position: relative;
+    -moz-opacity: 0.45;
+    filter: alpha(opacity=20);
+    border-radius: 3px;
+    background-image: url(../assets/images/KILL-BILL-IMAGE-2.png);
+    background-size: cover;
+    background-position: center;
+    
+    
 }
 
 
@@ -347,6 +373,7 @@ body {
     width: 100%;
     height: 100%;
     -moz-opacity: 0.45;
+    border-radius: 3px;
     filter: alpha(opacity=45);
     background-image: url(../assets/images/fetchimage.gif);
     background-repeat: no-repeat;
@@ -415,6 +442,7 @@ body {
     grid-area: IMAGE;
     width: 100%;
     height: 300px;
+    border-radius: 3px;
     background-image: url(../assets/images/BAD-MUTHAFUCKER.gif);
     background-repeat: no-repeat;
     background-size: cover;
