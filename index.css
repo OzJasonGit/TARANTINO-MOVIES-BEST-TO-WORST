@@ -59,7 +59,7 @@ body {
 /*******************************************************************/
 #MAIN-CONTAINER {
     width: 90vw;
-    height: 100%;
+    height: auto;
     display: grid;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -155,10 +155,14 @@ body {
 
 #GRID {
     grid-area: TITLE;
+    display: grid;
     width: 100%;
     height: auto;
-    
-
+    grid-row-gap: 40px;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "TITLE"
+                         "SUBTITLE"
+                         "IMAGE"
 }
 
 
@@ -206,7 +210,7 @@ body {
     grid-column-gap: 40px;
     grid-row-gap: 40px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 3fr 1fr;
+    grid-template-rows: 3fr;
     grid-template-areas: "IMAGE IMAGE IMAGE"
         ". . .";
 }
@@ -282,7 +286,11 @@ body {
     background-color: hotpink;
 }
 
-
+#IMAGE-STATIC {#
+    grid-area: IMAGE;
+    width: 100%;
+    height: 300px;
+}
 
 
 
@@ -399,13 +407,13 @@ h1 a {
 
 #JQUERY{
     grid-area: ACCORDION;
-    height: 
+    
 
 }
 
 .accordion {
     width: 100%;
-    height: 100%;
+    height: auto;
     
     margin: 30px auto 20px;
     background: #FFF;
