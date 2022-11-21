@@ -8,10 +8,9 @@ function clock() {
     let hrs = date.getHours();
     let mins = date.getMinutes();
     let secs = date.getSeconds();
-    let period = "AM";
-    
 
     //convert 24 hour clock to 12 hour clock 
+    let period = "AM"; 
     if (hrs == 0) hrs = 12;
     if (hrs > 12) {
     hrs = hrs - 12;
@@ -31,13 +30,20 @@ function clock() {
     //render clock in html 
     document.getElementById("CLOCK").innerText = time;
     }
-
     clock();
+
                                        
                                         
+    
 
+function date(){
+    let todaysDate = new Date();
 
+    console.log(todaysDate)
 
+    document.getElementById("DATE").innerText = todaysDate;
+   }
+   date();
 
 
 
