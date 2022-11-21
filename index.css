@@ -29,7 +29,7 @@ body {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    background-color: rosybrown;
+    background-color: #2e2e2e;
 }
 
 
@@ -102,8 +102,9 @@ body {
     grid-column-gap: 40px;
     grid-row-gap: 100px;
     grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: 100px 1fr 1fr 1fr 100px;
+    grid-template-rows: 100px 1fr 1fr 1fr 1fr 100px;
     grid-template-areas: ". . ."
+                         ". ICON ."
                          ". MAIN_TITLE ."
                          ". DESCRIPTION ."
                          ". REACT_ACCORDION ."
@@ -155,6 +156,17 @@ body {
 
 }
 
+
+
+#ICON-HOLDER {
+    grid-area: ICON;
+    display: grid;
+    height: 300px
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    justify-content: center;
+}
 
 #FOOTER {
     width: 90vw;
@@ -465,7 +477,7 @@ p {
 }
 
 body {
-    background: #2d2c41;
+    
     font-family: 'Open Sans', Arial, Helvetica, Sans-serif, Verdana, Tahoma;
 }
 
@@ -489,10 +501,17 @@ h1 a {
 }
 
 
-#JQUERY{
-    grid-area: ACCORDION;
-    
 
+#ACCORDION-FIXED{
+    grid-area: ACCORDION;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+
+#JQUERY{   
+    position: relative;
 }
 
 .accordion {
@@ -500,17 +519,19 @@ h1 a {
     height: auto;
     
     margin: 30px auto 20px;
-    background: #FFF;
+    background: #2e2e2e;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 3px;
 }
 
 .accordion .link {
+    width: 100%;
+    height: auto;
     cursor: pointer;
     display: block;
     padding: 15px 15px 15px 42px;
-    color: #4D4D4D;
+    color: #d9d9d9;
     font-size: 14px;
     font-weight: 700;
     border-bottom: 1px solid #CCC;
@@ -529,7 +550,7 @@ h1 a {
     top: 16px;
     left: 12px;
     font-size: 18px;
-    color: #595959;
+    color: #d9d9d9;
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
@@ -586,6 +607,6 @@ h1 a {
 
 .submenu a:hover {
     background: #b63b4d;
-    color: #FFF;
+    color: #d9d9d9;
 }
 /******************************ACCORDION***************************/
