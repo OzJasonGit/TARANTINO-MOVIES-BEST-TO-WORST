@@ -122,6 +122,14 @@ body {
     justify-content: center;
 }
 
+
+#CONTAINER-BOTTOM {
+    display: flex;
+    width: 100%;
+    background-color: #2e2e2e;
+    justify-content: center;
+}
+
 #HEADER {
     width: 90vw;
     height: 300px;
@@ -134,16 +142,22 @@ body {
     grid-column-gap: 40px;
     grid-row-gap: 40px;
     grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows:  auto auto;
+    grid-template-rows:  auto auto auto;
     background-color: #2e2e2e;
-    
-    
+    grid-template-areas: ". . ."
+                         ". CLOCK ."
+                         ". . ."        
 }
 
 
+#CLOCK-CONTAINER{
+    grid-area: CLOCK;
+
+}
+
 
 #FOOTER {
-    width: 100vw;
+    width: 90vw;
     height: 300px;
     display: grid;
     -webkit-box-pack: center;
@@ -351,9 +365,24 @@ body {
 
 h1 {
     font-family: sofia-pro, sans-serif;
+    padding-top: 0px;
+    padding-bottom: 0px;
     font-weight: 700;
     font-style: normal;
-    font-size: 5rem;   
+    font-size: 5rem; 
+    color: #2e2e2e;
+}
+
+
+#CLOCK {
+    font-family: sofia-pro, sans-serif;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 5rem;
+    color: #d9d9d9;
+    text-align: right;
 }
 
 
@@ -362,6 +391,7 @@ h2 {
     font-weight: 700;
     font-style: normal;
     font-size: 2.5rem;
+    color: #2e2e2e;
 }
 
 
@@ -370,6 +400,7 @@ p {
     font-weight: 400;
     font-style: normal;
     font-size: 1rem;
+    color: #2e2e2e;
 }
 
 
