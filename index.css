@@ -343,26 +343,10 @@ body {
 
 
 
-
-
 #TEXT {
     grid-area: TEXT;
     width: 100%;
     height: auto;
-}
-
-
-
-
-#GRID-CONTAINER {
-    width: 100%;
-    height: auto;
-    display: grid;
-
-    grid-area: REACT_ACCORDION;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 40px;
-    grid-template-areas: "KILL-BILL ACCORDION ACCORDION";
 }
 
 
@@ -395,6 +379,19 @@ body {
     background-position: center;
 }
 
+
+
+
+#GRID-CONTAINER {
+    width: 100%;
+    height: auto;
+    display: grid;
+
+    grid-area: REACT_ACCORDION;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-template-areas: "KILL-BILL ACCORDION ACCORDION";
+}
 
 
 
@@ -439,6 +436,95 @@ body {
 
 
 
+/****************************************************MEDIA QUERY********************************************/
+@media (max-width: 1250px) {
+    #ACCORDION-HOLDER {
+        grid-area: ACCORDION;
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-row-gap: 40px;
+        grid-column-gap: 40px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "TITLE"
+            "ACCORDION";
+    }
+
+
+    #GRID-CONTAINER {
+        height: auto;
+        display: grid;
+        grid-area: REACT_ACCORDION;
+        grid-template-rows: 400px auto;
+        grid-row-gap: 40px;
+        grid-template-areas: "KILL-BILL KILL-BILL KILL-BILL"
+            "ACCORDION ACCORDION ACCORDION";
+    }
+
+
+    #KILL-BILL {
+        grid-area: KILL-BILL;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        -moz-opacity: 0.45;
+        filter: alpha(opacity=20);
+        border-radius: 3px;
+        background-repeat: no-repeat;
+        background-image: url(assets/images/kill-bill.PNG);
+        background-size: contain;
+        background-position: center;
+    }
+
+
+    #DESCRIPTION {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-area: DESCRIPTION;
+        grid-template-rows: 1fr 3fr;
+        grid-template-columns: 1fr;
+        grid-row-gap: 40px;
+        grid-template-areas: "TEXT"
+                             "GIF";
+    }
+
+    #ICON {
+        display: flex;
+        justify-content: center;
+    }
+}
+/****************************************************MEDIA QUERY********************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /****************************************************FOOTER*************************************************/
 #FOOTER {
     width: 90vw;
@@ -455,8 +541,8 @@ body {
     grid-template-rows: auto auto auto auto;
     background-color: #2e2e2e;
     grid-template-areas: ". . ."
-        ". TEXT ."
-        ". IMAGE ."
+                         ". TEXT ."
+                         ". IMAGE ."
 }
 
 
@@ -573,22 +659,6 @@ p {
     color: #2e2e2e;
 }
 /******************************FONTS************************************************************************/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
