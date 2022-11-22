@@ -14,9 +14,7 @@ import 'accordion-js/dist/accordion.min.css';
 
 
 
-/*******************************************************************************************************************/
-
-
+/****************************************************MAIN***************************************************/
 body {
     width: 100%;
     height: 100%;
@@ -30,6 +28,29 @@ body {
     -ms-flex-direction: column;
     flex-direction: column;
     background-color: #2e2e2e;
+}
+
+
+.horizontal {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-row-gap: 0px;
+    justify-content: center;
+    grid-template-rows: auto auto auto auto;
+    -webkit-box-align: start;
+    -webkit-align-items: start;
+    -ms-flex-align: start;
+    align-items: start;
+    -webkit-align-content: start;
+    -ms-flex-line-pack: start;
+    align-content: start;
+    grid-template-columns: 1fr;
+    grid-template-areas: "HEADER"
+        "ICON"
+        "MAIN"
+        "FOOTER"
+
 }
 
 
@@ -54,20 +75,102 @@ body {
 }
 
 
-
 #SECOND {
+    grid-area: ICON;
     width: 100%;
     height: auto;
-    grid-area: ICON;
+    
 }
 
 
 #BOTTOM {
     grid-area: FOOTER;
 }
+/****************************************************MAIN***************************************************/
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************HEADER CLOCK*******************************************/
+#HEADER {
+    width: 90vw;
+    height: auto;
+    display: grid;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    grid-column-gap: 40px;
+    grid-row-gap: 60px;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: auto auto auto;
+    background-color: #2e2e2e;
+    grid-template-areas: ". . ."
+        ". CLOCK ."
+        ". . .";
+}
+
+
+
+#CLOCK-CONTAINER {
+    grid-area: CLOCK;
+}
+
+
+
+
+#CONTAINER-TOP {
+    display: flex;
+    width: 100%;
+    background-color: #2e2e2e;
+    justify-content: center;
+}
+/****************************************************HEADER CLOCK*******************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************ICON AREA*********************************************/
 #ICON-AREA {
     width: 90vw;
     height: auto;
@@ -83,17 +186,10 @@ body {
     grid-template-rows: auto auto auto;
     background-color: rgb(237, 216, 247);
     grid-template-areas: ". . ."
-                         ". ICON ."
-                         ". . .";
+        ". ICON ."
+        ". . .";
 }
 
-
-
-#ICON {
-    
-    display: flex;
-    justify-content: right;
-}
 
 #ICON-CONTAINER {
     grid-area: ICON;
@@ -103,30 +199,11 @@ body {
 
 
 
-
-
-.horizontal {
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-row-gap: 0px;
-    justify-content: center;
-    grid-template-rows: auto auto auto auto;
-    -webkit-box-align: start;
-        -webkit-align-items: start;
-        -ms-flex-align: start;
-        align-items: start;
-        -webkit-align-content: start;
-        -ms-flex-line-pack: start;
-        align-content: start;
-    grid-template-columns: 1fr;
-    grid-template-areas: "HEADER"
-                         "ICON"
-                         "MAIN"
-                         "FOOTER"
-        
+#ICON {
+    display: flex;
+    justify-content: right;
 }
-/*******************************************************************/
+/****************************************************ICON AREA*********************************************/
 
 
 
@@ -135,7 +212,25 @@ body {
 
 
 
-/*******************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************MAIN CONTAINER*****************************************/
 #MAIN-CONTAINER {
     width: 90vw;
     height: auto;
@@ -158,197 +253,6 @@ body {
 
 
 
-
-
-
-#CONTAINER-TOP{
-    display: flex;
-    width: 100%;
-    background-color: #2e2e2e;
-    justify-content: center;
-}
-
-
-
-
-
-#CONTAINER-BOTTOM {
-    display: flex;
-    width: 100%;
-    background-color: #2e2e2e;
-    justify-content: center;
-}
-
-#HEADER {
-    width: 90vw;
-    height: auto;
-    display: grid;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-
-    grid-column-gap: 40px;
-    grid-row-gap: 60px;
-    grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows:  auto auto auto;
-    background-color: #2e2e2e;
-    grid-template-areas: ". . ."
-                         ". CLOCK ."
-                         ". . .";        
-}
-
-
-#CLOCK-CONTAINER{
-    grid-area: CLOCK;
-
-}
-
-
-
-
-
-
-
-
-#FOOTER {
-    width: 90vw;
-    height: auto;
-    display: grid;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-
-    grid-column-gap: 40px;
-    grid-row-gap: 40px;
-    grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: auto auto auto auto;
-        background-color: #2e2e2e;
-        grid-template-areas: ". . ."
-                             ". TEXT ."
-                             ". IMAGE ."
-                            
-}
-
-#FOOTER-TEXT {
-    grid-area: TEXT;
-}
-
-
-#FOOTER-IMAGE{
-    display: flex;
-    grid-area: IMAGE;
-    justify-content: right;
-
-
-}
-/*******************************************************************/
-
-
-
-
-/*******************************************************************/
-#APP_GRID {
-
-    width: 100%;
-    height: auto;
-    display: grid;
-
-    grid-area: APP_GRID;
-    grid-row-gap: 40px;
-    grid-column-gap: 40px;
-    grid-template-columns: 1fr 2fr 2fr;
-    grid-template-rows: 60px auto auto auto auto auto auto auto 60px;
-    grid-template-areas: ". . ."
-        "TITLE TITLE TITLE"
-        "IR CANVAS CANVAS"
-        "MC CANVAS CANVAS"
-        "SP CANVAS CANVAS"
-        "NOY CANVAS CANVAS"
-        "INCTR CANVAS CANVAS"
-        "SUBMIT CANVAS CANVAS";
-
-}
-/*****************************************************************/
-
-
-#TITLE {
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-area: MAIN_TITLE;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 40px;
-    grid-template-areas: "TITLE TITLE TITLE";
-}
-
-
-#GRID {
-    grid-area: TITLE;
-    display: grid;
-    width: 100%;
-    height: auto;
-    grid-row-gap: 40px;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: "TITLE"
-                         "SUBTITLE"
-                         "IMAGE"
-}
-
-
-#DESCRIPTION {
-    width: 100%;
-    height: auto;
-    display: grid;
-
-    grid-area: DESCRIPTION;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-column-gap: 40px;
-    grid-template-areas: "TEXT TEXT GIF GIF GIF GIF GIF";
-}
-
-
-#GRID-CONTAINER {
-    width: 100%;
-    height: auto;
-    display: grid;
-
-    grid-area: REACT_ACCORDION;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 40px;
-    grid-template-areas: "KILL-BILL ACCORDION ACCORDION";
-}
-
-
-
-#HOLDER {
-    width: 100%;
-    height: 100%;
-}
-
-
-
-#KILL-BILL {
-    grid-area: KILL-BILL;
-    width: 100%;
-    height: 60%;
-    position: relative;
-    -moz-opacity: 0.45;
-    filter: alpha(opacity=20);
-    border-radius: 3px;
-    background-repeat: no-repeat;
-    background-image: url(assets/images/kill-bill.PNG);
-    background-size: contain;
-    background-position: center;
-    
-    
-}
-
-
-
-
-
 #GIF {
     justify-: right;
     grid-area: GIF;
@@ -367,8 +271,59 @@ body {
 
 
 
+#GRID {
+    grid-area: TITLE;
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-row-gap: 40px;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "TITLE"
+        "SUBTITLE"
+        "IMAGE"
+}
 
-#GIPHY{
+
+
+#IMAGE-STATIC {
+    grid-area: IMAGE;
+    width: 100%;
+    height: 300px;
+    border-radius: 3px;
+    background-image: url(assets/images/bad-mofo.GIF);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+
+
+
+
+#TITLE {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-area: MAIN_TITLE;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-template-areas: "TITLE TITLE TITLE";
+}
+
+
+#DESCRIPTION {
+    width: 100%;
+    height: auto;
+    display: grid;
+
+    grid-area: DESCRIPTION;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-template-areas: "TEXT TEXT GIF GIF GIF GIF GIF";
+}
+
+
+#GIPHY {
     grid-area: IMAGE;
     opacity: 0.85;
     width: 100%;
@@ -390,15 +345,55 @@ body {
 
 
 
-
-
-
 #TEXT {
     grid-area: TEXT;
     width: 100%;
-    height: auto;   
+    height: auto;
 }
 
+
+
+
+#GRID-CONTAINER {
+    width: 100%;
+    height: auto;
+    display: grid;
+
+    grid-area: REACT_ACCORDION;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-template-areas: "KILL-BILL ACCORDION ACCORDION";
+}
+
+
+
+
+#THE-LIST {
+    grid-area: TITLE;
+    width: 100%;
+    height: auto;
+    font-family: sofia-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 5rem;
+    text-align: right;
+}
+
+
+
+#KILL-BILL {
+    grid-area: KILL-BILL;
+    width: 100%;
+    height: 60%;
+    position: relative;
+    -moz-opacity: 0.45;
+    filter: alpha(opacity=20);
+    border-radius: 3px;
+    background-repeat: no-repeat;
+    background-image: url(assets/images/kill-bill.PNG);
+    background-size: contain;
+    background-position: center;
+}
 
 
 
@@ -413,47 +408,110 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas: "TITLE TITLE TITLE"
-                         "ACCORDION ACCORDION ACCORDION"
-                         "ACCORDION ACCORDION ACCORDION";
-    
+        "ACCORDION ACCORDION ACCORDION"
+        "ACCORDION ACCORDION ACCORDION";
 }
+/****************************************************MAIN CONTAINER*****************************************/
 
-    
 
 
-#THE-LIST {
-    grid-area: TITLE;
-    width: 100%;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************FOOTER*************************************************/
+#FOOTER {
+    width: 90vw;
     height: auto;
-    font-family: sofia-pro, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 5rem;
-    text-align: right;
+    display: grid;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    background-color: #2e2e2e;
+    grid-template-areas: ". . ."
+        ". TEXT ."
+        ". IMAGE ."
 }
 
-#REACT {
-    grid-area: ACCORDION;
+
+
+
+#CONTAINER-BOTTOM {
+    display: flex;
     width: 100%;
-    height: auto;
-    background-color: hotpink;
+    background-color: #2e2e2e;
+    justify-content: center;
 }
 
-#IMAGE-STATIC {
+
+
+
+#FOOTER-TEXT {
+    grid-area: TEXT;
+}
+
+
+
+#FOOTER-IMAGE {
+    display: flex;
     grid-area: IMAGE;
-    width: 100%;
-    height: 300px;
-    border-radius: 3px;
-    background-image: url(assets/images/bad-mofo.GIF);
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    background-position: center;
+    justify-content: right;
 }
+/****************************************************FOOTER*************************************************/
 
 
 
-/******************************FONTS***************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************FONTS************************************************************************/
 
 h1 {
     font-family: sofia-pro, sans-serif;
@@ -514,7 +572,7 @@ p {
     font-size: 1rem;
     color: #2e2e2e;
 }
-
+/******************************FONTS************************************************************************/
 
 
 
