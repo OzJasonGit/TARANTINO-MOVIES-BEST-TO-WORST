@@ -337,8 +337,9 @@ body {
     -moz-opacity: 0.45;
     filter: alpha(opacity=20);
     border-radius: 3px;
+    background-repeat: no-repeat;
     background-image: url(../assets/images/KILL-BILL-IMAGE-2.png);
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     
     
