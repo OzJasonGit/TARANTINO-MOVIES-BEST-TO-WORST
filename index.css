@@ -478,6 +478,7 @@ body {
     }
 
 
+
     #DESCRIPTION {
         width: 100%;
         height: auto;
@@ -490,9 +491,58 @@ body {
                              "GIF";
     }
 
+
+
+    #ICON-CONTAINER {
+        grid-area: ICON;
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+
     #ICON {
         display: flex;
         justify-content: center;
+    }
+
+
+
+    #THE-LIST {
+        grid-area: TITLE;
+        width: 100%;
+        height: auto;
+        font-family: sofia-pro, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 5rem;
+        text-align: left;
+    }
+
+
+
+    #CLOCK {
+        font-family: sofia-pro, sans-serif;
+         padding-top: 0px;
+        padding-bottom: 0px;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 5rem;
+        color: #d9d9d9;
+        text-align: left;
+    }
+    
+    
+    #DATE {
+        font-family: sofia-pro, sans-serif;
+        padding-top: 0px;
+        padding-bottom: 30px;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 2.5rem;
+        color: #d9d9d9;
+        text-align: left;
     }
 }
 /****************************************************MEDIA QUERY********************************************/
