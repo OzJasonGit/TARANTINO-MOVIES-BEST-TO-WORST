@@ -505,6 +505,7 @@ body {
     #ICON {
         display: flex;
         justify-content: center;
+        font-size: 2.5rem;
     }
 
 
